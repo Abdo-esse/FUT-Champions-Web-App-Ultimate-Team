@@ -24,7 +24,8 @@
     grid-area: 2 / 1 / 3 / 2;
 }
 .reserve{
-    grid-area: 2 / 2 / 3 / 3;   
+    grid-area: 2 / 2 / 3 / 3; 
+    justify-items: center; 
 }
 
 .cardesJouers{
@@ -33,15 +34,26 @@
     display: flex;
     overflow: scroll;
 }
-.carde{
+.cardeJouer{
     height: 100%;
 }
 
 .reserveJouers{
     height: 100%;
-    width: 100%; 
+    width: 25vw;
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:  1fr;
+  grid-gap: 10px; 
+  grid-template-rows: 40vh; /* Let the rows grow based on content */
+  grid-auto-rows: 40vh;
+  overflow: scroll;
+  
+
+}
+.cardereserve{
+   
+    height:  40vh;
+
 }
 
 
@@ -71,7 +83,7 @@
 
 
 
-@media  (max-width:550px)  {
+@media  (max-width:600px)  {
     .container{
         
         grid-template-rows: 40vh 80vh 40vh;
@@ -82,6 +94,14 @@
     }
     .reserve{
         grid-area: 3 / 1 /4/ 3;   
+    }
+    .reserveJouers{
+        height:  40vh;
+        width: 100vw;
+        display: flex;
+      overflow: scroll;
+      
+    
     }
 }
 
