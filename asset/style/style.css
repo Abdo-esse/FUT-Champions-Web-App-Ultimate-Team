@@ -17,7 +17,7 @@ body{
   .container{
     display: grid;
     grid-template-columns: 75vw  25vw;
-    grid-template-rows: 40vh 100vh ;
+    grid-template-rows: 50vh 100vh ;
    
 }
 .lesJouers{
@@ -39,13 +39,13 @@ body{
 }
 .cardeJouer{
     height: 100%;
-    width: 191.22px;
+    width:  212.22px;
     background: url(/asset/image/badge_gold-removebg-preview2.png);
     background-size: contain;
     background-repeat : no-repeat ;
     display: grid;
-    grid-template-rows: 40px 36px 93px 25px 25px 26px;
-    grid-template-columns: 9px 58px 111px;
+    grid-template-rows: 49px 41px 102px 25px 32px 27px;
+    grid-template-columns: 10px 58px 134px;
 
 }
 
@@ -76,10 +76,15 @@ body{
     grid-area: 4/ 2 / 5/ 4; 
 }
 .conditionPhisique{
-    grid-area: 5/ 2 / 6/ 4; 
+    grid-area: 5/ 2 / 6/ 4;
+    display: flex; 
+    justify-content: space-between;
+    text-align: center;
+    font-size: 13px;
 }
 .club{
     grid-area: 6/ 2 / 7/ 4; 
+    display: flex;
 }
 
 
