@@ -1,6 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+   
+}
+body{
     background: #050813;
 }
 /* .home{
@@ -40,6 +43,9 @@
     background: url(/asset/image/badge_gold-removebg-preview2.png);
     background-size: contain;
     background-repeat : no-repeat ;
+    display: grid;
+    grid-template-rows: 40px 36px 93px 25px 25px 26px;
+    grid-template-columns: 9px 58px 111px;
 
 }
 
@@ -60,7 +66,21 @@
     height:  40vh;
 
 }
-
+.ratingAndPosition{
+    grid-area: 2 / 2 / 3 / 3; 
+}
+.photo{
+    grid-area: 3/ 2 / 4 / 4; 
+}
+.name{
+    grid-area: 4/ 2 / 5/ 4; 
+}
+.conditionPhisique{
+    grid-area: 5/ 2 / 6/ 4; 
+}
+.club{
+    grid-area: 6/ 2 / 7/ 4; 
+}
 
 
 /* .reserveJouers,.cardesJouers::-webkit-scrollbar{
