@@ -13,9 +13,9 @@
 
   .container{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr ;
-    height: 100vh;
+    grid-template-columns: 75vw  25vw;
+    grid-template-rows: 40vh 100vh ;
+   
 }
 .lesJouers{
     grid-area: 1 / 1 / 2 / 3;
@@ -27,11 +27,54 @@
     grid-area: 2 / 2 / 3 / 3;   
 }
 
+.cardesJouers{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+.carde{
+    height: 100%;
+}
+
+.reserveJouers{
+    height: 100%;
+    width: 100%; 
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media  (max-width:550px)  {
     .container{
         
-        grid-template-rows: 1fr 2.5fr 1fr;
+        grid-template-rows: 40vh 80vh 40vh;
       
     }
     .terain{
