@@ -25,7 +25,7 @@
 }
 .reserve{
     grid-area: 2 / 2 / 3 / 3; 
-    justify-items: center; 
+    
 }
 
 .cardesJouers{
@@ -36,6 +36,10 @@
 }
 .cardeJouer{
     height: 100%;
+    width: 191.22px;
+    background: url(/asset/image/badge_gold.webp);
+    background-size: contain;
+    background-repeat : no-repeat ;
 }
 
 .reserveJouers{
@@ -43,19 +47,31 @@
     width: 25vw;
     display: grid;
     grid-template-columns:  1fr;
-  grid-gap: 10px; 
+  
   grid-template-rows: 40vh; /* Let the rows grow based on content */
   grid-auto-rows: 40vh;
   overflow: scroll;
-  
+  justify-items: center; 
 
 }
 .cardereserve{
-   
+    
     height:  40vh;
 
 }
 
+
+
+/* .reserveJouers,.cardesJouers::-webkit-scrollbar{
+    width: 6px;
+} */
+/* .reserveJouers,.cardesJouers::-webkit-scrollbar-track{
+    background: #050813;
+} */
+/* .reserveJouers,.cardesJouers::-webkit-scrollbar-thumb{
+    background: gold;
+    border-radius: 10px;
+} */
 
 
 
