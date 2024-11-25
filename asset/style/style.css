@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #050813;
+}
+/* .home{
+    background-image: url("../image/bg\ index.jpg");
+    background-size: cover;
+    height:100vh;
+    width: 100vw;
+ background-repeat: no-repeat;
+} */
+
+  .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    height: 100vh;
+}
+.lesJouers{
+    grid-area: 1 / 1 / 2 / 3;
+}
+.terain{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.reserve{
+    grid-area: 2 / 2 / 3 / 3;   
+}
+
+
+@media  (max-width:550px)  {
+    .terain{
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    .reserve{
+        grid-area: 2 / 2 / 3 / 3;   
+    }
+}
+
+
+
+
+
+
+
