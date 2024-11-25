@@ -37,9 +37,10 @@
 .cardeJouer{
     height: 100%;
     width: 191.22px;
-    background: url(/asset/image/badge_gold.webp);
+    background: url(/asset/image/badge_gold-removebg-preview2.png);
     background-size: contain;
     background-repeat : no-repeat ;
+
 }
 
 .reserveJouers{
