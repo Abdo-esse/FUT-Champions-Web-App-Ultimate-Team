@@ -86,7 +86,7 @@ body{
     height: 161%;
     width: 68%;
     position: relative;
-    bottom: 47px;
+    bottom: 45px;
     left: 15px;
 }
 
@@ -94,7 +94,8 @@ body{
     grid-area: 4/ 2 / 5/ 4; 
     text-align: center;
     font-size: 17px;
-
+    position: relative;
+    bottom: 3px;
 }
 .conditionPhisique{
     grid-area: 5/ 2 / 6/ 4;
