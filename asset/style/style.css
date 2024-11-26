@@ -17,7 +17,7 @@ body{
   .container{
     display: grid;
     grid-template-columns: 75vw  25vw;
-    grid-template-rows: 50vh 100vh ;
+    grid-template-rows: 60vh 100vh ;
    
 }
 .lesJouers{
@@ -44,9 +44,10 @@ body{
     background-size: contain;
     background-repeat : no-repeat ;
     display: grid;
-    grid-template-rows: 49px 41px 102px 25px 32px 27px;
+    /* grid-template-rows: 49px 41px 102px 25px 32px 27px;
+    grid-template-columns: 10px 58px 134px; */
+    grid-template-rows: 46px 41px 102px 25px 34px 27px;
     grid-template-columns: 10px 58px 134px;
-
 }
 
 .reserveJouers{
@@ -67,13 +68,22 @@ body{
 
 }
 .ratingAndPosition{
-    grid-area: 2 / 2 / 3 / 3; 
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center; 
+}
+.position{
+    font-size: 16Px;
+    top: -5px;
+    position: relative;
 }
 .photo{
     grid-area: 3/ 2 / 4 / 4; 
 }
 .name{
     grid-area: 4/ 2 / 5/ 4; 
+    text-align: center;
+    font-size: 30px;
+
 }
 .conditionPhisique{
     grid-area: 5/ 2 / 6/ 4;
@@ -81,6 +91,10 @@ body{
     justify-content: space-between;
     text-align: center;
     font-size: 13px;
+    padding: 0 5px;
+}
+.conditionPhisique h6{
+    font-size: 18px;
 }
 .club{
     grid-area: 6/ 2 / 7/ 4; 
@@ -128,7 +142,7 @@ body{
 @media  (max-width:600px)  {
     .container{
         
-        grid-template-rows: 40vh 80vh 40vh;
+        grid-template-rows: 60vh 80vh 40vh;
       
     }
     .terain{
