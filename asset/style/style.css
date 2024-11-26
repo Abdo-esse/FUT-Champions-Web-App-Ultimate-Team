@@ -18,7 +18,7 @@ body{
   .container{
     display: grid;
     grid-template-columns: 80vw  213px;
-    grid-template-rows: 60vh 100vh ;
+    grid-template-rows: 30vh 140vh ;
    
 }
 .lesJouers{
@@ -29,6 +29,7 @@ body{
 }
 .reserve{
     grid-area: 2 / 2 / 3 / 3; 
+    height: 130vh;
     /* width: 21px; */
 }
 
@@ -40,16 +41,14 @@ body{
     overflow-y: hidden;
 }
 .cardeJouer{
-    height: 55vh;
-    width:  202px;
+    height: 28vh;
+    width: 134px;
     background: url(/asset/image/badge_gold-removebg-preview2.png);
     background-size: contain;
-    background-repeat : no-repeat ;
+    background-repeat: no-repeat;
     display: grid;
-    /* grid-template-rows: 49px 41px 102px 25px 32px 27px;
-    grid-template-columns: 10px 58px 134px; */
-    grid-template-rows: 41px 41px 100px 25px 38px 21px;
-    grid-template-columns: 10px 58px 134px;
+ grid-template-rows: 20px 12px 74px 12px 17px 16px;
+    grid-template-columns: 7px 36px 74px;
 }
 
 .reserveJouers{
@@ -57,7 +56,7 @@ body{
     width:212.22px;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: red;
+  
  
    
 
@@ -69,10 +68,14 @@ body{
 }
 .ratingAndPosition{
     grid-area: 2 / 2 / 3 / 3;
-    text-align: center; 
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    right: 3px;
+    top: 3px;
 }
 .position{
-    font-size: 16Px;
+    
     top: -5px;
     position: relative;
 }
@@ -80,17 +83,17 @@ body{
     grid-area: 3/ 2 / 4 / 4; 
 }
 .photo img{
-    height: 200%;
-    width: 76%;
+    height: 161%;
+    width: 68%;
     position: relative;
-    bottom:99px;
-    left: 28px;
+    bottom: 47px;
+    left: 15px;
 }
 
 .name{
     grid-area: 4/ 2 / 5/ 4; 
     text-align: center;
-    font-size: 30px;
+    font-size: 17px;
 
 }
 .conditionPhisique{
@@ -98,11 +101,11 @@ body{
     display: flex; 
     justify-content: space-between;
     text-align: center;
-    font-size: 13px;
+    font-size: 7px;
     padding: 0 10px 0 5px;
 }
 .conditionPhisique h6{
-    font-size: 18px;
+    font-size: 10px;
 }
 .club{
     grid-area: 6/ 2 / 7/ 4; 
@@ -113,7 +116,7 @@ body{
 
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
 }
                     
 ::-webkit-scrollbar-track {
@@ -123,9 +126,17 @@ body{
                     
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 217, 0, 0.308); 
 }
 
+
+.terrain-de-football{
+    width: 100%;
+    height: 100%;
+    background: url(/asset/image/train-incliner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -154,20 +165,21 @@ body{
 @media  (max-width:600px)  {
     .container{
         
-        grid-template-rows: 60vh 80vh 40vh;
+        grid-template-rows: 30vh 100vh 30vh;
       
     }
     .terain{
         grid-area: 2 / 1 / 3 / 3;
     }
     .reserve{
-        grid-area: 3 / 1 /4/ 3;   
+        grid-area: 3 / 1 /4/ 3;
+        height: 0;   
     }
     .reserveJouers{
-        height:  40vh;
-        width: 100vw;
+        height:  30vh;
+        width: 100%;
         display: flex;
-      overflow: scroll;
+      overflow-x: scroll;
       
     
     }
