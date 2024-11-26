@@ -36,6 +36,8 @@ body{
     height: 130vh;
     /* width: 21px; */
 }
+/* .reserve.cardeJouers */
+
 
 .cardesJouers{
     height: 100%;
@@ -152,48 +154,77 @@ body{
 
 .gardien-de-but{
     grid-area: 4 / 3 / 5 / 4;
+    position: relative;
+    bottom: 70px;
 }
 
 
 .arriere-lateral1{
     grid-area: 3 / 5 / 4 / 6;
+    position: relative;
+    bottom: 25px;
 }
 
 .arriere-lateral2{
     grid-area: 3 / 1 / 4 / 2;
+    position: relative;
+    bottom: 25px;
 }
 
 .stoppeur{
     grid-area: 3 / 4 / 4 / 5;
+    position: relative;
+    bottom: 55px;
+    right: 30px;
 }
 
 .libero{
 
 grid-area: 3 / 2 / 4 / 3;
+position: relative;
+    bottom: 55px;
+    left: 50px;
 }
 
 
 
 .milieu-defensif1{
     grid-area: 2 / 4 / 3 / 5;
+    position: relative;
+    bottom: 50px;
+    left: 20px;
 }
 
 .milieux-defensif2{
     grid-area: 2 / 3 / 3 / 4;
+    position: relative;
+    bottom: 50px;
 }
 .milieux-defensif3{
     grid-area: 2 / 2 / 3 / 3;
+    position: relative;
+    bottom: 50px;
+    right: 20px;
 }
 
 .attaquant1{
     grid-area: 1 / 4 / 2 / 5;
+    position: relative;
+    bottom: 40px;
+    left: 53px;
 }
 
 .attaquant2{
     grid-area: 1 / 3 / 2 / 4;
+    position: relative;
+    bottom: 40px;
 }
 .attaquant3{
     grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    bottom: 40px;
+    right: 53px
 }
 
 
@@ -207,7 +238,7 @@ grid-area: 3 / 2 / 4 / 3;
 
 
 
-@media  (max-width:600px)  {
+@media  (max-width:756px)  {
     .container{
         
         grid-template-rows: 30vh 100vh 30vh;
