@@ -144,8 +144,8 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 134px 134px 134px 134px 134px ;
+    grid-template-rows: 124.3px 124.3px 124.3px 124.3px ;
 }
 
 
@@ -154,36 +154,34 @@ body{
 
 .gardien-de-but{
     grid-area: 4 / 3 / 5 / 4;
-    position: relative;
-    bottom: 70px;
+    /* position: relative;
+    bottom: 70px; */
 }
 
 
 .arriere-lateral1{
     grid-area: 3 / 5 / 4 / 6;
     position: relative;
-    bottom: 25px;
+    top: 55px;
 }
 
 .arriere-lateral2{
     grid-area: 3 / 1 / 4 / 2;
     position: relative;
-    bottom: 25px;
+    top: 55px;
 }
 
 .stoppeur{
     grid-area: 3 / 4 / 4 / 5;
     position: relative;
-    bottom: 55px;
-    right: 30px;
+    top: 20px;
 }
 
 .libero{
 
 grid-area: 3 / 2 / 4 / 3;
 position: relative;
-    bottom: 55px;
-    left: 50px;
+top: 20px;
 }
 
 
@@ -191,20 +189,20 @@ position: relative;
 .milieu-defensif1{
     grid-area: 2 / 4 / 3 / 5;
     position: relative;
-    bottom: 50px;
-    left: 20px;
+    bottom: 16px;
+    left: 22px;
 }
 
 .milieux-defensif2{
     grid-area: 2 / 3 / 3 / 4;
     position: relative;
-    bottom: 50px;
+    bottom: 16px;
 }
 .milieux-defensif3{
     grid-area: 2 / 2 / 3 / 3;
     position: relative;
-    bottom: 50px;
-    right: 20px;
+    bottom: 16px;
+    right: 22px;
 }
 
 .attaquant1{
