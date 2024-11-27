@@ -36,7 +36,7 @@ console.log(inputsText);
       }
     }
 }
-//vali des inputs text
+//valides des inputs text
 function validationText() {
 //  const image = document.querySelector(".multiple_logo").files
 // if (image) {
@@ -50,15 +50,16 @@ function validationText() {
 // console.log(image);
 
     console.log(300);
-    
-    const regex = /^[a-zA-Z]+$/;
+    const regex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
+    // const regex = /^[a-zA-Z]+$/;
     for (let i = 0; i < inputsText.length; i++) {
-        if (inputsText[i].value== regex) {
+        if (regex.test(inputsText[i].value)) {
             console.log("nadi");
-            
+            inputsText[i].style.border="2.5px solid green"
         }
         else{
             console.log('node tg3d');
+            inputsText[i].style.border="2.5px solid red"
             
         }
         
@@ -76,6 +77,12 @@ function validationText() {
     conditionPhisiqueIunput[i].addEventListener('input',validationconditionPhisique)
     
  }
+
+ for (let i = 0; i < inputsText.length; i++) {
+    inputsText[i].addEventListener('input',validationText)
+    
+ }
+
 
 //  conditionPhisiqueIunput.addEventListener('change',validationInputs)
 
