@@ -15,7 +15,40 @@ let inputsLien = document.querySelectorAll(".inputsLien");
 
 // select
 let selectInput=document.querySelector('.selectInput')
-// l
+
+
+// l'inpet de fullNam
+let fullNameInputs =document.querySelector('.fullName')
+
+// l'inpet de photo
+let photoInputs =document.querySelector('.photo')
+
+// l'inpet de  position
+let  positionInputs =document.querySelector('. position')
+
+// l'inpet de flag
+let flagInputs =document.querySelector('.flag')
+
+// l'inpet de club
+let clubinputs =document.querySelector('.club')
+
+// l'inpet de logo
+let logoinputs =document.querySelector('.logo')
+
+// l'inpet de fullNam
+let  ratinginputs =document.querySelector('.fullName')
+
+// l'inpet de fullNam
+let fullNameinputs =document.querySelector('.fullName')
+
+// l'inpet de fullNam
+let fullNameinputs =document.querySelector('.fullName')
+
+// l'inpet de fullNam
+let fullNameinputs =document.querySelector('.fullName')
+
+// l'inpet de fullNam
+let fullNameinputs =document.querySelector('.fullName')
  
 
 //data
