@@ -7,18 +7,7 @@ body{
     background: #050813;
     overflow-x: hidden;
 }
-/* .home{
-    background-image: url("../image/bg\ index.jpg");
-    background-size: cover;
-    height:100vh;
-    width: 100vw;
- background-repeat: no-repeat;
-} */
 
- 
-/* .lesJouers{
-    grid-area: 1 / 1 / 2 / 3;
-} */
 .terain{
     display: flex;
     /* justify-content: center; */
@@ -34,11 +23,11 @@ body{
 
 .addJouers img{
     height: 28vh;
-    /* display: none; */
+    display: none;
     width: 134px;
 }
 form{
-    display: none;
+    /* display: none; */
 }
 
 .cardsJouers{
@@ -59,17 +48,7 @@ form{
     grid-template-columns: 7px 36px 74px;
 }
 
-/* .reserveJouers{
-    height: 100%;
-    width:212.22px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-} */
-/* .cardereserve{
-    
-    height:  40vh;
 
-} */
 .ratingAndPosition{
     grid-area: 2 / 2 / 3 / 3;
     text-align: center;
@@ -163,8 +142,7 @@ form{
 
 .gardien-de-but{
     grid-area: 4 / 3 / 5 / 4;
-    /* position: relative;
-    bottom: 70px; */
+    
 }
 
 
@@ -251,13 +229,7 @@ top: 20px;
         grid-template-rows: 30vh 100vh 30vh;
       
     }
-    /* .terain{
-        grid-area: 2 / 1 / 3 / 3;
-    } */
-    /* .reserve{
-        grid-area: 3 / 1 /4/ 3;
-        height: 0;   
-    } */
+    
     .reserveJouers{
         height:  30vh;
         width: 100%;
@@ -266,10 +238,7 @@ top: 20px;
       
     
     }
-    /* .terrain-de-football {
-        width: 71%;
-        height: 64%;
-    } */
+    
 
 }
 
