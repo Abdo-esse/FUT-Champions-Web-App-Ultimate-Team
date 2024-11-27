@@ -1,10 +1,4 @@
 // les variables
-
-// forme 
-let forme= document.querySelector('#forme')
-console.log(forme);
-
-
 // les input du condition phisiquale
 
 let conditionPhisiqueIunput = document.querySelectorAll( ".conditionPhisiqueIunput");
@@ -21,10 +15,8 @@ let inputsLien = document.querySelectorAll(".inputsLien");
 
 // select
 let selectInput=document.querySelector('.selectInput')
- selectInput.addEventListener('change', ()=>{
-   
-     console.log(selectInput.value);
- })
+// l
+ 
 
 //data
 let data = [];
@@ -58,6 +50,13 @@ let fullName,
     for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
       if (conditionPhisiqueIunput[i].value > 0 &&conditionPhisiqueIunput[i].value < 100) {
         conditionPhisiqueIunput[i].style.border = "2.5px solid green";
+        rating=conditionPhisiqueIunput[0].value
+                  pace=conditionPhisiqueIunput[1].value
+                  shooting=conditionPhisiqueIunput[2].value
+                  passing=conditionPhisiqueIunput[3].value
+                  dribbling=conditionPhisiqueIunput[4].value
+                  defending=conditionPhisiqueIunput[5].value
+                  physical=conditionPhisiqueIunput[6].value
         
       } else {
         conditionPhisiqueIunput[i].style.border = "2.5px solid red";
@@ -72,6 +71,10 @@ function validationText() {
     for (let i = 0; i < inputsText.length; i++) {
       if (regex.test(inputsText[i].value)) {
         inputsText[i].style.border = "2.5px solid green";
+        fullName=inputsText[0].value
+                club=inputsText[1].value
+        
+        
       } 
       else {
         inputsText[i].style.border = "2.5px solid red";
@@ -84,6 +87,7 @@ function validationText() {
         selectInput.style.border = "2.5px solid red";
     }else{
         selectInput.style.border ="none"
+        position=selectInput.value
     }
   }
 
@@ -94,6 +98,9 @@ function validationImage() {
     for (let i = 0; i < inputsLien.length; i++) {
       if (regexImage.test(inputsLien[i].value)) {
         inputsLien[i].style.border = "2.5px solid green";
+        photo=inputsLien[0].value
+        flag=inputsLien[1].value
+        logo=inputsLien[2].value
       } else {
         inputsLien[i].style.border = "2.5px solid red";
       }
@@ -102,44 +109,11 @@ function validationImage() {
   
 
 
-function enregitrerData() {
-
-//     for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
-//         if (conditionPhisiqueIunput[i].value > 0 &&conditionPhisiqueIunput[i].value < 100) {
-//           rating=conditionPhisiqueIunput[0].value
-//           console.log(rating);
-//           pace=conditionPhisiqueIunput[1].value
-//           shooting=conditionPhisiqueIunput[2].value
-//           passing=conditionPhisiqueIunput[3].value
-//           dribbling=conditionPhisiqueIunput[4].value
-//           defending=conditionPhisiqueIunput[5].value
-//           physical=conditionPhisiqueIunput[6].value
-          
-//         }
-//     for (let i = 0; i < inputsText.length; i++) {
-//       if (regex.test(inputsText[i].value)) {
-//         fullName=inputsText[0].value
-//         club=inputsText[1].value
-//       }
-//     }
-//     }
+// function enregitrerData() {
+  
+//  if (condition) {
     
-//         for (let i = 0; i < inputsLien.length; i++) {
-//           if (regexImage.test(inputsLien[i].value)) {
-//             photo=inputsLien[0].value
-//             flag=inputsLien[1].value
-//             logo=inputsLien[2].value
-//           }
-//         }
-    
-//         if (selectInput.value=="") {
-//             selectInput.style.border = "2.5px solid red";
-//         }else{
-//             position=selectInput.value
-//         }
-//         if (g) {
-            
-//         }
+//  }
 //   console.log(fullName,
 //     photo,
 //     position,
@@ -154,9 +128,10 @@ function enregitrerData() {
 //     defending,
 //     physical
 //   );
+
+// }
+
   
-  
-}
 
 // l'appel des fonctions
 
@@ -180,4 +155,4 @@ for (let i = 0; i < inputsLien.length; i++) {
 selectInput.addEventListener('change',select)
 //  conditionPhisiqueIunput.addEventListener('change',validationInputs)
 
-sendDataBtn.addEventListener("click",enregitrerData);
+sendDataBtn.addEventListener("click",enregistrerData);
