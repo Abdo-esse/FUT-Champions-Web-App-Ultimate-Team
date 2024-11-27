@@ -14,7 +14,7 @@ let inputsText=document.querySelectorAll('.inputsText')
  const sendDataBtn= document.querySelector('.sendData')
 
 //les inputse d'image 
-
+let inputsLien=document.querySelectorAll('.inputsLien')
 
 
  //file
@@ -42,15 +42,15 @@ let inputsText=document.querySelectorAll('.inputsText')
 }
 //valides des inputs text
 function validationText() {
-     console.log(300);
+   
     const regex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
     for (let i = 0; i < inputsText.length; i++) {
         if (regex.test(inputsText[i].value)) {
-            console.log("nadi");
+        
             inputsText[i].style.border="2.5px solid green"
         }
         else{
-            console.log('node tg3d');
+            
             inputsText[i].style.border="2.5px solid red"
          }     
     }
@@ -59,14 +59,18 @@ function validationText() {
 //validation des inputs image
 function validationImage() {
     const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
-
-
-
-
-
-
-
-
+    console.log('hfhf');
+    
+    for (let i = 0; i < inputsLien.length; i++) {
+        if (regexImage.test(inputsLien[i].value)) {
+            console.log("nadi");
+            inputsLien[i].style.border="2.5px solid green"
+        }
+        else{
+            console.log('node tg3d');
+            inputsLien[i].style.border="2.5px solid red"
+         }     
+    }
     //  const image = document.querySelector(".multiple_logo").files
 // if (image) {
 //     const urlsd = URL.createObjectURL(image)
@@ -86,18 +90,23 @@ function validationImage() {
  // l'appel des fonctions
 
  //validation
-
+ //validation de nombre
  for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
     conditionPhisiqueIunput[i].addEventListener('input',validationconditionPhisique)
     
  }
-
+//validation de text
  for (let i = 0; i < inputsText.length; i++) {
     inputsText[i].addEventListener('input',validationText)
     
+ }
+ //validation de lien 
+ for (let i = 0; i < inputsLien.length; i++) {
+    inputsLien[i].addEventListener('input',validationImage)
+
  }
 
 
 //  conditionPhisiqueIunput.addEventListener('change',validationInputs)
 
-sendDataBtn.addEventListener('click',validationText)
+// sendDataBtn.addEventListener('click',validationText)
