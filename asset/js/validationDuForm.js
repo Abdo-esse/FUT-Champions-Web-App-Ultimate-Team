@@ -6,15 +6,23 @@ let conditionPhisiqueIunput = document.querySelectorAll('.conditionPhisiqueIunpu
 
 //les inpits du text
 
-let inputsText=document.querySelector('.inputsText')
+let inputsText=document.querySelectorAll('.inputsText')
+console.log(inputsText);
+
 
 //Button de send data
  const sendDataBtn= document.querySelector('.sendData')
 
+ //file
+//  const image = document.getElementById(multiple_logo)
+  
+ const imageRegex = /^https?:\/\/.+\.(jpg|jpeg|png|gif)$/i;
 
 //les fonction 
 
-// la fonction de validation des inputs
+// les fonction de validation des inputs
+
+//validation condition Phisique
  function validationconditionPhisique() {
     
     for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
@@ -28,6 +36,34 @@ let inputsText=document.querySelector('.inputsText')
       }
     }
 }
+//vali des inputs text
+function validationText() {
+//  const image = document.querySelector(".multiple_logo").files
+// if (image) {
+//     const urlsd = URL.createObjectURL(image)
+
+    
+// }
+ 
+
+ 
+// console.log(image);
+
+    console.log(300);
+    
+    const regex = /^[a-zA-Z]+$/;
+    for (let i = 0; i < inputsText.length; i++) {
+        if (inputsText[i].value== regex) {
+            console.log("nadi");
+            
+        }
+        else{
+            console.log('node tg3d');
+            
+        }
+        
+    }
+}
 
 
 
@@ -37,7 +73,10 @@ let inputsText=document.querySelector('.inputsText')
  //validation
 
  for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
-    conditionPhisiqueIunput[i].addEventListener('input',validationInputs)
+    conditionPhisiqueIunput[i].addEventListener('input',validationconditionPhisique)
     
  }
+
 //  conditionPhisiqueIunput.addEventListener('change',validationInputs)
+
+sendDataBtn.addEventListener('click',validationText)
