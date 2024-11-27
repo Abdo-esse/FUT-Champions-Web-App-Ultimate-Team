@@ -7,11 +7,15 @@ let conditionPhisiqueIunput = document.querySelectorAll('.conditionPhisiqueIunpu
 //les inpits du text
 
 let inputsText=document.querySelectorAll('.inputsText')
-console.log(inputsText);
+
 
 
 //Button de send data
  const sendDataBtn= document.querySelector('.sendData')
+
+//les inputse d'image 
+
+
 
  //file
 //  const image = document.getElementById(multiple_logo)
@@ -38,20 +42,8 @@ console.log(inputsText);
 }
 //valides des inputs text
 function validationText() {
-//  const image = document.querySelector(".multiple_logo").files
-// if (image) {
-//     const urlsd = URL.createObjectURL(image)
-
-    
-// }
- 
-
- 
-// console.log(image);
-
-    console.log(300);
+     console.log(300);
     const regex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
-    // const regex = /^[a-zA-Z]+$/;
     for (let i = 0; i < inputsText.length; i++) {
         if (regex.test(inputsText[i].value)) {
             console.log("nadi");
@@ -60,10 +52,32 @@ function validationText() {
         else{
             console.log('node tg3d');
             inputsText[i].style.border="2.5px solid red"
-            
-        }
-        
+         }     
     }
+}
+
+//validation des inputs image
+function validationImage() {
+    const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
+
+
+
+
+
+
+
+
+    //  const image = document.querySelector(".multiple_logo").files
+// if (image) {
+//     const urlsd = URL.createObjectURL(image)
+
+    
+// }
+ 
+
+ 
+
+    
 }
 
 
