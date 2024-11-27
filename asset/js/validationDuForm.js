@@ -15,10 +15,9 @@ let inputsText=document.querySelector('.inputsText')
 //les fonction 
 
 // la fonction de validation des inputs
- function validationInputs() {
-     console.log('khdama');
-     
-   for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
+ function validationconditionPhisique() {
+    
+    for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
       
       if (conditionPhisiqueIunput[i].value > 0 && conditionPhisiqueIunput[i].value<100) {
         
@@ -27,11 +26,8 @@ let inputsText=document.querySelector('.inputsText')
       else  {
          conditionPhisiqueIunput[i].style.border="2.5px solid red"
       }
-    
-   }
-
-    
- }
+    }
+}
 
 
 
@@ -40,4 +36,8 @@ let inputsText=document.querySelector('.inputsText')
 
  //validation
 
- conditionPhisiqueIunput.addEventListener('input',validationInputs)
+ for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
+    conditionPhisiqueIunput[i].addEventListener('input',validationInputs)
+    
+ }
+//  conditionPhisiqueIunput.addEventListener('change',validationInputs)
