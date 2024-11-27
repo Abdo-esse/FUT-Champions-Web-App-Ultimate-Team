@@ -15,13 +15,7 @@ body{
  background-repeat: no-repeat;
 } */
 
-  .container{
-    display: grid;
-    grid-template-columns: 80vw 213px ;
-    grid-template-rows: 30vh 100vh;
-    row-gap: 4px;
-   
-}
+ 
 .lesJouers{
     grid-area: 1 / 1 / 2 / 3;
 }
@@ -139,7 +133,7 @@ body{
 
 .terrain-de-football{
   
-    height: 85%;
+    height: 66%;
     background: url(/asset/image/train-incliner.png);
     background-size: contain;
     background-repeat: no-repeat;
