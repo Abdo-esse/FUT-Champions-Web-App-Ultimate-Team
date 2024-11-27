@@ -21,8 +21,9 @@ body{
 } */
 .terain{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    padding: 10px;
 }
 .formulair{
     grid-area: 2 / 2 / 3 / 3; 
@@ -32,8 +33,8 @@ body{
 
 
 
-.cardesJouers{
-    height: 100%;
+.cardsJouers{
+    display: flex;
     width: 100%;
     display: flex;
     overflow-x: scroll;
@@ -90,7 +91,7 @@ body{
     text-align: center;
     font-size: 17px;
     position: relative;
-    bottom: 3px;
+    bottom: 8px;
 }
 .conditionPhisique{
     grid-area: 5/ 2 / 6/ 4;
@@ -102,12 +103,23 @@ body{
 }
 .conditionPhisique h6{
     font-size: 10px;
+    position: relative;
+    bottom: 4px
 }
 .club{
     grid-area: 6/ 2 / 7/ 4; 
     display: flex;
+    position: relative;
+    top: 3px;
+    left: 33px;
 }
-
+.nationalite img{
+    height: 75%;
+    margin-right: 3px;
+}
+.ekipe img{
+    height: 75%;   
+}
 
 
 
