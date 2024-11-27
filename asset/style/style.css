@@ -28,10 +28,18 @@ body{
 .formulair{
     grid-area: 2 / 2 / 3 / 3; 
     height: 130vh;
+    /* display: none; */
     
 }
 
-
+.addJouers img{
+    height: 28vh;
+    /* display: none; */
+    width: 134px;
+}
+form{
+    display: none;
+}
 
 .cardsJouers{
     display: flex;
