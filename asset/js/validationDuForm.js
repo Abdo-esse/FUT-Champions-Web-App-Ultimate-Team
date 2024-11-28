@@ -20,35 +20,45 @@ let selectInput=document.querySelector('.selectInput')
 // l'inpet de fullNam
 let fullNameInputs =document.querySelector('.fullName')
 
+
+
 // l'inpet de photo
-let photoInputs =document.querySelector('.photo')
+let photoInputs =document.querySelector('.photoInputs')
 
 // l'inpet de  position
-let  positionInputs =document.querySelector('. position')
+let  positionInputs =document.querySelector('.positionInputs')
 
 // l'inpet de flag
-let flagInputs =document.querySelector('.flag')
+let flagInputs =document.querySelector('.flagInputs')
 
 // l'inpet de club
-let clubinputs =document.querySelector('.club')
+let clubInputs =document.querySelector('.clubInputs')
+
+
 
 // l'inpet de logo
-let logoinputs =document.querySelector('.logo')
+let logoInputs =document.querySelector('.logoInputs')
 
-// l'inpet de fullNam
-let  ratinginputs =document.querySelector('.fullName')
+// l'inpet de rating
+let  ratingInputs =document.querySelector('.ratingInputs')
 
-// l'inpet de fullNam
-let fullNameinputs =document.querySelector('.fullName')
+// l'inpet de pace
+let paceInputs =document.querySelector('.paceInputs')
 
-// l'inpet de fullNam
-let fullNameinputs =document.querySelector('.fullName')
+// l'inpet de shooting
+let shootingInputs =document.querySelector('.shootingInputs')
 
-// l'inpet de fullNam
-let fullNameinputs =document.querySelector('.fullName')
+// l'inpet de passing
+let passingInputs =document.querySelector('.passingInputs')
 
-// l'inpet de fullNam
-let fullNameinputs =document.querySelector('.fullName')
+// l'inpet de dribbling
+let dribblingInputs =document.querySelector('.dribblingInputs')
+
+// l'inpet de defending
+let defendingInputs =document.querySelector('.defendingInputs')
+
+// l'inpet de physical
+let physicalInputs =document.querySelector('.physicalInputs')
  
 
 //data
@@ -73,7 +83,7 @@ let fullName,
 
 
   //la formul de regix de valides un text
- const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
+ const regexImage = /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|bmp|svg))$/i
 
 //les fonction
 
@@ -126,7 +136,7 @@ function validationText() {
 
   //validation des inputs image
 function validationImage() {
-    const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
+    // const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
   
     for (let i = 0; i < inputsLien.length; i++) {
       if (regexImage.test(inputsLien[i].value)) {
@@ -142,11 +152,16 @@ function validationImage() {
   
 
 
-// function enregitrerData() {
+function enregitrerData() {
   
-//  if (condition) {
+ if (regex.test(fullNameInputs.value)&& regex.test(clubInputs.value) && regexImage.test( photoInputs.value)&& regexImage.test( flagInputs.value)&&regexImage.test(logoInputs.value)&&selectInput.value!==""&&(paceInputs.value > 0 &&paceInputs.value < 100)&&(ratingInputs.value > 0 &&ratingInputs.value < 100)&&(shootingInputs.value > 0 &&shootingInputs.value < 100)&&(passingInputs.value > 0 &&passingInputs.value < 100)&&(dribblingInputs.value > 0 &&dribblingInputs.value < 100)&&(physicalInputs.value > 0 &&physicalInputs.value < 100)&&(defendingInputs.value > 0 &&defendingInputs.value < 100)) {
+    console.log('mamma');
+   
     
-//  }
+    
+ }
+//  console.log('mmm');
+ 
 //   console.log(fullName,
 //     photo,
 //     position,
@@ -162,7 +177,7 @@ function validationImage() {
 //     physical
 //   );
 
-// }
+}
 
   
 
@@ -188,4 +203,4 @@ for (let i = 0; i < inputsLien.length; i++) {
 selectInput.addEventListener('change',select)
 //  conditionPhisiqueIunput.addEventListener('change',validationInputs)
 
-sendDataBtn.addEventListener("click",enregistrerData);
+sendDataBtn.addEventListener("click",enregitrerData);
