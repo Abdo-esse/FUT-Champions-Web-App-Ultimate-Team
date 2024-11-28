@@ -1,4 +1,4 @@
-import{ouverForm}from "./ouverERFermeform.js"
+import{ouverForm,updateDataBtn}from "./ouverERFermeform.js"
 import{data,localStorageData,selectInput,photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
     fullNameInputs} from "./validationDuForm.js"
 
@@ -14,6 +14,7 @@ let joueur=document.querySelector('.joueurs')
  function formeUpdateData(index) {
  
     ouverForm()
+    updateDataBtn.style.display="none"
     photoInputs.value=data[index].photo
     flagInputs.value=data[index].flag
     clubInputs.value=data[index].club
@@ -27,13 +28,14 @@ let joueur=document.querySelector('.joueurs')
     physicalInputs.value=data[index].physical
     fullNameInputs.value=data[index].fullName
     selectInput.value=data[index].position
-    if (selectInput.value=="GK"){
-        golKepr.style.display="block"
-        joueur.style.display="none"
-     }else{
-         joueur.style.display="block"
-         golKepr.style.display="none"
-     }
+    // if (selectInput.value=="GK"){
+    //     golKepr.style.display="block"
+    //     joueur.style.display="none"
+    // //  }
+    // else{
+    //      joueur.style.display="block"
+    //      golKepr.style.display="none"
+    // //  }
     console.log(data[index]);
     
     

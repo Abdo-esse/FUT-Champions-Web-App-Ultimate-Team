@@ -5,9 +5,12 @@ import{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}from "./valida
  
  const addjoueurs=document.querySelector('.addJouersImag')
 
- 
-
  const forme=document.querySelector('#forme')
+
+const updateDataBtn=document.querySelector('.saveData')
+
+const deletCardeBtn=document.querySelector('.deletData')
+
 
 
 
@@ -16,6 +19,8 @@ function ouverForm(){
     
     addjoueurs.style.display=" none"
     forme.style.display="block"
+    updateDataBtn.style.display=" none"
+    deletCardeBtn.style.display=" none"
 
 }
 
@@ -52,4 +57,4 @@ function fermeForme() {
 addjoueurs.addEventListener('click',ouverForm)
 
 //expotre
-export{fermeForme,ouverForm}
+export{fermeForme,ouverForm,deletCardeBtn,updateDataBtn}
