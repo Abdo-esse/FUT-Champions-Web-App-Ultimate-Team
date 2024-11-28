@@ -1,6 +1,9 @@
 //import
 import{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}from "./validationDuForm.js"
-
+import{joueur} from "./fourmedynamique.js"
+ 
+//  const labelGolkepr=document.querySelectorAll('.goolkepr')
+//  labelGolkepr.forEach(label=>label.style.display=" none")
  
  
  const addjoueurs=document.querySelector('.addJouersImag')
@@ -21,6 +24,7 @@ function ouverForm(){
     forme.style.display="block"
     updateDataBtn.style.display=" none"
     deletCardeBtn.style.display=" none"
+    joueur.style.display=" none"
 
 }
 

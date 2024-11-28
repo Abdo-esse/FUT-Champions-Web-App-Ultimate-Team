@@ -1,31 +1,42 @@
 import{selectInput} from "./validationDuForm.js"
 
-//div des inputs du GK
-let golKepr=document.querySelector('.goolkepr')
-
-
 //div des inputs du joueurs
 let joueur=document.querySelector('.joueurs')
+console.log(joueur);
+
+//les labelle des  des inputs du GK
+const labelGolkepr=document.querySelectorAll('.goolkepr')
+console.log(labelGolkepr);
+
+//les labelle des  des inputs du GK
+const labelJoueur=document.querySelectorAll('.labelJoueur')
+console.log(labelJoueur);
+
 
 
 
 function formedynamiq() {
     if (selectInput.value=="GK"){
-        golKepr.style.display="block"
-        joueur.style.display="none"
+        labelGolkepr.forEach(label=>label.style.display="block")
+        labelJoueur.forEach(label=>label.style.display="none")
+        joueur.style.display="block"
+
      }else if (selectInput.value=="") {
-        golKepr.style.display="none"
+        labelGolkepr.forEach(label=>label.style.display="none")
+        labelJoueur.forEach(label=>label.style.display="none")
         joueur.style.display="none"
      }else{
-         joueur.style.display="block"
-         golKepr.style.display="none"
+        labelGolkepr.forEach(label=>label.style.display="none")
+        labelJoueur.forEach(label=>label.style.display="block")
+        joueur.style.display="block"
      }
       
 }
 
 
+
 selectInput.addEventListener('change',formedynamiq)
 
 export{
-    joueur,golKepr
+    labelJoueur,labelGolkepr,joueur
 }
