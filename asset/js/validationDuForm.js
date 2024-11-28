@@ -169,7 +169,22 @@ function enregitrerData() {
         defending,
         physical
       );
-   
+   let donneesJoueur={
+    fullName:fullName,
+    photo:photo,
+    position:position, 
+    flag:flag,
+    club:club,
+    logo:logo,
+    rating:rating,
+    pace:pace,
+    shooting:shooting,
+    passing:passing,
+    dribbling:dribbling,
+    defending:defending,
+    physical:physical
+   }
+    console.log(donneesJoueur);
     
     
  }
