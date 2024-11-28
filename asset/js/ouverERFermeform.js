@@ -21,7 +21,7 @@ function ouverForm(){
 
 
 function fermeForme() {
-    console.log('khdam');
+    
     for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
         conditionPhisiqueIunput[i].value=""
         conditionPhisiqueIunput[i].style.border = "none";

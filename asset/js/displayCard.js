@@ -44,5 +44,5 @@ function displayCard() {
 }
 
 export{
-    displayCard
+    displayCard,reserve
 }
