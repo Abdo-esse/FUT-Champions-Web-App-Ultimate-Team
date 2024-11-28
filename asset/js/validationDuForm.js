@@ -170,6 +170,7 @@ function enregitrerData() {
 
 
     localStorageData()
+    displayCard()
     fermeForme()
    }
    

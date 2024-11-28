@@ -16,7 +16,7 @@ function displayCard() {
     reserve.innerHTML+=`
     <div class="cardeJouer">
                 <div class="ratingAndPosition">
-                  <h1>${elment.ratin}</h1>
+                  <h1>${elment.rating}</h1>
                   <p class="position">${elment.position}</p>
                 </div>
                 <div class="photo">

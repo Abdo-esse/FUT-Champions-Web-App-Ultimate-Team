@@ -68,10 +68,10 @@ form{
     grid-area: 3/ 2 / 4 / 4; 
 }
 .photo img{
-    height: 161%;
+    height: 123%;
     width: 68%;
     position: relative;
-    bottom: 45px;
+    bottom: 19px;
     left: 15px;
 }
 
