@@ -9,7 +9,7 @@ const reserve=document.querySelector('.cardsJouers')
 
 function displayCard() {
     
-   reserve.innerHTML+= ` `;
+   reserve.innerHTML="";
 
    data.forEach(elment=>
       
