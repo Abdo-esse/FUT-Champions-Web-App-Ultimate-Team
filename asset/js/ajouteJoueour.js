@@ -1,5 +1,6 @@
 // import
  import{sendDataBtn,data} from "./validationDuForm.js"
+ import{ displayCard} from "./displayCard.js"
 
 
 
@@ -12,6 +13,7 @@
     // Vérifier si le tableau 'data' est vide ou non
     if (data.length > 0) {
         console.log("Données enregistrées :", data); // Si 'data' n'est pas vide
+        
     } 
 });
 

@@ -1,4 +1,5 @@
 import{data} from "./validationDuForm.js"
+
 //div de reserve
 const reserve=document.querySelector('.cardsJouers')
 
@@ -8,9 +9,10 @@ const reserve=document.querySelector('.cardsJouers')
 
 function displayCard() {
     
-    reserve.innerHTML+=``
+   reserve.innerHTML+= ` `;
 
    data.forEach(elment=>
+      
     reserve.innerHTML+=`
     <div class="cardeJouer">
                 <div class="ratingAndPosition">
@@ -40,3 +42,6 @@ function displayCard() {
     
 }
 
+export{
+    displayCard
+}
