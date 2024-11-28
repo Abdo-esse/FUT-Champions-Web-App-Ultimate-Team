@@ -64,19 +64,7 @@ let physicalInputs =document.querySelector('.physicalInputs')
 //data
 let data = [];
 // fullNam
-let fullName,
-  photo,
-  position,
-  flag,
-  club,
-  logo,
-  rating,
-  pace,
-  shooting,
-  passing,
-  dribbling,
-  defending,
-  physical;
+let fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribbling,defending,physical;
 
   //la formul de regix de valides un text
   const regex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
@@ -136,7 +124,7 @@ function validationText() {
 
   //validation des inputs image
 function validationImage() {
-    // const regexImage = /(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))/gi;
+
   
     for (let i = 0; i < inputsLien.length; i++) {
       if (regexImage.test(inputsLien[i].value)) {
@@ -155,20 +143,7 @@ function validationImage() {
 function enregitrerData() {
   
  if (regex.test(fullNameInputs.value)&& regex.test(clubInputs.value) && regexImage.test( photoInputs.value)&& regexImage.test( flagInputs.value)&&regexImage.test(logoInputs.value)&&selectInput.value!==""&&(paceInputs.value > 0 &&paceInputs.value < 100)&&(ratingInputs.value > 0 &&ratingInputs.value < 100)&&(shootingInputs.value > 0 &&shootingInputs.value < 100)&&(passingInputs.value > 0 &&passingInputs.value < 100)&&(dribblingInputs.value > 0 &&dribblingInputs.value < 100)&&(physicalInputs.value > 0 &&physicalInputs.value < 100)&&(defendingInputs.value > 0 &&defendingInputs.value < 100)) {
-    console.log(fullName,
-        photo,
-        position,
-        flag,
-        club,
-        logo,
-        rating,
-        pace,
-        shooting,
-        passing,
-        dribbling,
-        defending,
-        physical
-      );
+    console.log(fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribbling,defending,physical);
    let donneesJoueur={
     fullName:fullName,
     photo:photo,
@@ -184,7 +159,7 @@ function enregitrerData() {
     defending:defending,
     physical:physical
    }
-    console.log(donneesJoueur);
+    
     
     
  }
@@ -216,6 +191,6 @@ for (let i = 0; i < inputsLien.length; i++) {
 }
 //validation select
 selectInput.addEventListener('change',select)
-//  conditionPhisiqueIunput.addEventListener('change',validationInputs)
 
+// la fonction de enregitrer data
 sendDataBtn.addEventListener("click",enregitrerData);
