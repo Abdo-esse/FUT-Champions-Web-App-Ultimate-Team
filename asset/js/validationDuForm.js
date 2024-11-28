@@ -164,16 +164,34 @@ function enregitrerData() {
    }
     
     
-    data.push(donneesJoueur) }
+    data.push(donneesJoueur)
+    console.log(data);
+
+
+    localStorageData()
     fermeForme()
+   }
+   
  
  
   
 
 }
 
-  
+  //local storage
+  function localStorageData() {
+    localStorage.setItem("data", JSON.stringify(data));
+}
 
+// initialisation des données locales
+function initData() {
+  const storedData = localStorage.getItem("data");
+  if (storedData) {
+      data = JSON.parse(storedData);
+      displayTask();
+      
+  }
+}
 // l'appel des fonctions
 
 //validation
@@ -198,7 +216,14 @@ selectInput.addEventListener('change',select)
 // la fonction de enregitrer data
 sendDataBtn.addEventListener("click",enregitrerData);
 
+// Fonction exécutée au chargement de la page
+document.addEventListener("DOMContentLoaded", () => {
+  initData(); 
+ 
+});
+
 
 // importe
 
-export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}
+export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn
+}
