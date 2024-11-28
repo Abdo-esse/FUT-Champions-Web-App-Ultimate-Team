@@ -12,7 +12,7 @@ import{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}from "./valida
 
 
 function ouverForm(){
-    console.log('khdam');
+    
     
     addjoueurs.style.display=" none"
     forme.style.display="block"

@@ -51,7 +51,6 @@ let paceInputs =document.querySelector('.paceInputs')
 
 // l'inpet de shooting
 let shootingInputs =document.querySelector('.shootingInputs')
-
 // l'inpet de passing
 let passingInputs =document.querySelector('.passingInputs')
 
@@ -229,5 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // importe
 
-export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn,localStorageData
+export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn,localStorageData,
+photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
+fullNameInputs
 }

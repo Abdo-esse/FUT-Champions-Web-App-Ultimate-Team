@@ -1,5 +1,5 @@
 import{data,localStorageData} from "./validationDuForm.js"
-import{updateData} from "./modificationDelet.js"
+import{formeUpdateData} from "./modificationDelet.js"
 
 
 //div de reserve
@@ -56,7 +56,7 @@ function displayCard() {
          const index = elment.target.closest('.updat').dataset.index;
  
          // Appeler updateData avec l'index
-         updateData(index);
+         formeUpdateData(index);
      });
    });
 

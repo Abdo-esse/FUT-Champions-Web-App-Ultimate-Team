@@ -25,3 +25,7 @@ function formedynamiq() {
 
 
 selectInput.addEventListener('change',formedynamiq)
+
+export{
+    joueur,golKepr
+}
