@@ -1,13 +1,13 @@
 // import
- import{enregitrerData, sendDataBtn,data} from "./validationDuForm.js"
+ import{sendDataBtn,data} from "./validationDuForm.js"
 
 
 
  
 
  sendDataBtn.addEventListener('click', () => {
-    // Appeler la fonction pour enregistrer les données
-    enregitrerData();
+    // // Appeler la fonction pour enregistrer les données
+    // enregitrerData();
 
     // Vérifier si le tableau 'data' est vide ou non
     if (data.length > 0) {
