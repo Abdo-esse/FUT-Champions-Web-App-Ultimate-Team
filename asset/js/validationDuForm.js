@@ -1,6 +1,6 @@
 //import
 import{fermeForme}from "./ouverERFermeform.js"
-import{ displayCard} from "./displayCard.js"
+import{ displayCard} from "./displayCard.js" 
 
 // les variables
 // les input du condition phisiquale
@@ -163,7 +163,7 @@ function enregitrerData() {
     defending:defending,
     physical:physical
    }
-    
+   const date = [{}]
     
     data.push(donneesJoueur)
     console.log(data);

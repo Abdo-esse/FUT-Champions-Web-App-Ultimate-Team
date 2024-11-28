@@ -223,7 +223,14 @@ top: 20px;
 .goolkepr{
     display: none
 }
+.updat{
+    top: 31px;
+    left: 94px;
+    position: relative;
+    width: 15px;
+    cursor: pointer;
 
+}
 
 
 
