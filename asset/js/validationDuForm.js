@@ -169,8 +169,10 @@ function enregitrerData() {
     console.log(data);
 
 
-    localStorageData()
     displayCard()
+
+    localStorageData()
+   
     fermeForme()
    }
    
@@ -227,5 +229,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // importe
 
-export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn
+export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn,localStorageData
 }

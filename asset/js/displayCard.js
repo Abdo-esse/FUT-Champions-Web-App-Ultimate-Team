@@ -1,4 +1,4 @@
-import{data} from "./validationDuForm.js"
+import{data,localStorageData} from "./validationDuForm.js"
 
 //div de reserve
 const reserve=document.querySelector('.cardsJouers')
@@ -39,6 +39,7 @@ function displayCard() {
              </div>
     `
    ) 
+   localStorageData()
     
 }
 
