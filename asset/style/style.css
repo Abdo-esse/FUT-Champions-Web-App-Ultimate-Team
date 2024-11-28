@@ -23,11 +23,11 @@ body{
 
 .addJouers img{
     height: 28vh;
-    display: none;
+    /* display: none; */
     width: 134px;
 }
 form{
-    /* display: none; */
+    display: none;
 
 }
 

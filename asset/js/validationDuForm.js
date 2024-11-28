@@ -1,3 +1,6 @@
+//import
+import{fermeForme}from "./ouverERFermeform.js"
+
 // les variables
 // les input du condition phisiquale
 
@@ -161,9 +164,9 @@ function enregitrerData() {
    }
     
     
-    
- }
-
+    data.push(donneesJoueur) }
+    fermeForme()
+ 
  
   
 
@@ -194,3 +197,8 @@ selectInput.addEventListener('change',select)
 
 // la fonction de enregitrer data
 sendDataBtn.addEventListener("click",enregitrerData);
+
+
+// importe
+
+export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}
