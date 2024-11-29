@@ -26,10 +26,10 @@ body{
     /* display: none; */
     width: 134px;
 }
-form{
+/* form{
     display: none;
 
-}
+} */
 
 
 .cardsJouers{
@@ -219,10 +219,10 @@ top: 20px;
 /* .joueurs{
     display: none
 }
-
-.goolkepr{
+ */
+#forme{
     display: none
-} */
+} 
 .updat{
     top: 31px;
     left: 94px;
