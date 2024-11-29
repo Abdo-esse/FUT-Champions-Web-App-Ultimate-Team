@@ -83,6 +83,6 @@ const labelJoueur=document.querySelectorAll('.labelJoueur')
        }
  }
 
-updateDataBtn.addEventListener('click',updateData)
+// updateDataBtn.addEventListener('click',updateData)
 
  export{formeUpdateData}

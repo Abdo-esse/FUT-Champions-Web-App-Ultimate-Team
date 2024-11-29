@@ -10,7 +10,8 @@ import{joueur} from "./fourmedynamique.js"
 
  const forme=document.querySelector('#forme')
 
-const updateDataBtn=document.querySelector('.saveData')
+let updateDataBtn=document.querySelector('.saveData')
+
 
 const deletCardeBtn=document.querySelector('.deletData')
 
