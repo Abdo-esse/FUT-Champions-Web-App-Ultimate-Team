@@ -19,11 +19,7 @@ let positionJoueur=null
   })
   
   function filtrePosition() {
-    console.log('data');
-     let filtreData=data.filter(place=>place.position===positionJoueur)
-    console.log(filtreData)
-
-    
-    // let positionCard=data.filter(position)
-    
+    // console.log('data');
+     data = data.filter(place=>place.position == positionJoueur)
+    console.log(data)
   }
