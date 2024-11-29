@@ -230,5 +230,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitrerData,sendDataBtn,localStorageData,
 photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
-fullNameInputs
+fullNameInputs,regexImage,regex
 }
