@@ -1,16 +1,22 @@
 import{ouverForm,updateDataBtn}from "./ouverERFermeform.js"
 import{data,localStorageData,sendDataBtn,selectInput,photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
     fullNameInputs} from "./validationDuForm.js"
+    
 
 
- 
-
-//div des inputs du GK
-let golKepr=document.querySelector('.goolkepr')
-
-
-//div des inputs du joueurs
+ //div des inputs du joueurs
 let joueur=document.querySelector('.joueurs')
+
+
+//les labelle des  des inputs du GK
+const labelGolkepr=document.querySelectorAll('.goolkepr')
+
+
+//les labelle des  des inputs du GK
+const labelJoueur=document.querySelectorAll('.labelJoueur')
+
+
+
  function formeUpdateData(index) {
  
     ouverForm()
@@ -32,18 +38,22 @@ let joueur=document.querySelector('.joueurs')
     fullNameInputs.value=data[index].fullName
     selectInput.value=data[index].position
     if (selectInput.value=="GK"){
-        golKepr.style.display="block"
-        joueur.style.display="none"
+        labelGolkepr.forEach(label=>label.style.display="block")
+        labelJoueur.forEach(label=>label.style.display="none")
+        joueur.style.display="block"
      }
     else{
-         joueur.style.display="block"
-         golKepr.style.display="none"
+        labelGolkepr.forEach(label=>label.style.display="none")
+        labelJoueur.forEach(label=>label.style.display="block")
+        joueur.style.display="block"
       }
-    
+   
     
     
  }
 
+
+ 
 
 
  export{formeUpdateData}

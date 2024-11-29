@@ -2,15 +2,15 @@ import{selectInput} from "./validationDuForm.js"
 
 //div des inputs du joueurs
 let joueur=document.querySelector('.joueurs')
-console.log(joueur);
+
 
 //les labelle des  des inputs du GK
 const labelGolkepr=document.querySelectorAll('.goolkepr')
-console.log(labelGolkepr);
+
 
 //les labelle des  des inputs du GK
 const labelJoueur=document.querySelectorAll('.labelJoueur')
-console.log(labelJoueur);
+
 
 
 
