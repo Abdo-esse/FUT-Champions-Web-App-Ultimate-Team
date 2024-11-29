@@ -162,7 +162,7 @@ function enregitrerData() {
     defending:defending,
     physical:physical
    }
-   const date = [{}]
+   const data = []
     
     data.push(donneesJoueur)
     console.log(data);
