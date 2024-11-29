@@ -231,7 +231,13 @@ top: 20px;
     cursor: pointer;
 
 }
-
+.delet{
+    top: 33px;
+    left: 92px;
+    position: relative;
+    width: 15px;
+    cursor: pointer;
+}
 
 
 
