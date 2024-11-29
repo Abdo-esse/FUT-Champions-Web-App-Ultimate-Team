@@ -3,7 +3,6 @@ import{data,localStorageData} from "./validationDuForm.js"
 
 // select les card du joueurs
   let cardeJouerTerain=document.querySelectorAll('.cardeJouerTerain')
-console.log(cardeJouerTerain);
 // position 
 let positionJoueur=null
 
@@ -21,8 +20,8 @@ let positionJoueur=null
   
   function filtrePosition() {
     console.log('data');
-    
-    console.log(data);
+     let filtreData=data.filter(place=>place.position===positionJoueur)
+    console.log(filtreData)
 
     
     // let positionCard=data.filter(position)
