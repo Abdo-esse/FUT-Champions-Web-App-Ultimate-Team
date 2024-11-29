@@ -89,6 +89,7 @@ const labelJoueur=document.querySelectorAll('.labelJoueur')
         localStorageData()
        
         fermeForme()
+        sendDataBtn.style.display="block"
        }
  }
 

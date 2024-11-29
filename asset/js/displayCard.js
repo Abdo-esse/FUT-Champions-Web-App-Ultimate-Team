@@ -1,5 +1,5 @@
 import{data,localStorageData} from "./validationDuForm.js"
-import{formeUpdateData} from "./modificationDelet.js"
+import{formeUpdateData} from "./modification.js"
 
 
 //div de reserve

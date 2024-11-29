@@ -54,6 +54,7 @@ function fermeForme() {
 
     addjoueurs.style.display=" block"
     forme.style.display="none"
+    
 
     
 }
