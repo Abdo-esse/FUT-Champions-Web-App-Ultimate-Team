@@ -36,7 +36,7 @@ let retourAchengemnet=null
     button.addEventListener('click',(card)=>{
       if (button.hasChildNodes()) {
         retourAchengemnet=button.childNodes[0]
-       let datafdf={
+       let datachandement={
 
           id:button.childNodes[0].id,
           fullName:retourAchengemnet.childNodes[7].childNodes[0].textContent,
@@ -53,7 +53,9 @@ let retourAchengemnet=null
           physical:retourAchengemnet.childNodes[9].childNodes[11].childNodes[2].textContent
           
         }
-        console.log(datafdf);
+        console.log(datachandement);
+        
+        
                 
       }
      
@@ -85,7 +87,7 @@ let retourAchengemnet=null
         let newcard=button.cloneNode(true)
         // console.log(button.id);
         iddelet=button.id
-        // deletCard()
+        deletCard()
         // console.log(filterData);
         
      
