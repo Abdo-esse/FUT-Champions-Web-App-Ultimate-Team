@@ -12,15 +12,24 @@ let cardFiltrer=document.querySelector('.cardFiltrer')
 
 let cardFiltrerParent=document.querySelector('.cardFiltrerParent')
 
+let idCard=null
+
+
+
 
 
 
   cardeJouerTerain.forEach((button)=>{
     button.addEventListener('click',(card)=>{
         positionJoueur=card.target.closest('.cardeJouerTerain').dataset.position
+        idCard=card.target.closest('.cardeJouerTerain').id
+        
+        
+        
         console.log(positionJoueur);
         
         filtrePosition()
+        transporterdata()
     }
     )
   })
@@ -28,13 +37,30 @@ let cardFiltrerParent=document.querySelector('.cardFiltrerParent')
   function filtrePosition() {
     // filterData=filterData.map()
     let filterData = data.filter(place => place.position == positionJoueur);
-    console.log(filterData)
-    displayCard(cardFiltrer,filterData)
-    cardFiltrer.querySelector('.updateAndDelet').style.display=" none"
-
     
-    cardFiltrerParent.style.display="block"
+    displayCard(cardFiltrer,filterData)
+    cardFiltrer.querySelectorAll('.updateAndDelet').forEach(card=>card.style.display=" none")
+    
+     cardFiltrerParent.style.display="block"
     addjoueurs.style.display=" none"
-
+    // transporterdata()
   }
  
+  function transporterdata() {
+    let addToTerain=cardFiltrer.querySelectorAll('.cardeJouer')
+    addToTerain.forEach(button=>{
+   
+      
+      button.addEventListener('click',()=>{
+        let newcard=button.cloneNode(true)
+     
+        let cardterainId=document.getElementById(idCard)
+        cardterainId.appendChild(newcard)
+        button.remove()
+
+        
+      })
+    })
+
+  }
+  
