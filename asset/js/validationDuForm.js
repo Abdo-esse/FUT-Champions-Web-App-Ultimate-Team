@@ -65,7 +65,10 @@ let physicalInputs =document.querySelector('.physicalInputs')
  
 
 //data
-let data = [];
+let data=[]
+
+
+
 // fullNam
 let fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribbling,defending,physical;
 
@@ -165,7 +168,7 @@ function enregitrerData() {
    
     
     data.push(donneesJoueur)
-    console.log(data);
+   
 
 
     displayCard()
