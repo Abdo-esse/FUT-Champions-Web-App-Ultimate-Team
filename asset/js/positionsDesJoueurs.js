@@ -26,11 +26,39 @@ let iddelet=null
 // new array pour filtrer
 let filterData=[]
 
+// div chaanger 
+let retourAchengemnet=null
+
 
 
 
   cardeJouerTerain.forEach((button)=>{
     button.addEventListener('click',(card)=>{
+      if (button.hasChildNodes()) {
+        retourAchengemnet=button.childNodes[0]
+       let datafdf={
+
+          id:button.childNodes[0].id,
+          fullName:retourAchengemnet.childNodes[7].childNodes[0].textContent,
+          photo:retourAchengemnet.childNodes[3].childNodes[1].currentSrc,
+          position:retourAchengemnet.childNodes[1].childNodes[3].textContent,
+          flag:retourAchengemnet.childNodes[11].childNodes[1].childNodes[1].currentSrc,
+          logo:retourAchengemnet.childNodes[11].childNodes[3].childNodes[0].currentSrc, 
+          rating:retourAchengemnet.childNodes[1].childNodes[1].textContent,
+          pace:retourAchengemnet.childNodes[9].childNodes[1].childNodes[2].textContent,
+          shooting:retourAchengemnet.childNodes[9].childNodes[3].childNodes[2].textContent,
+          passing:retourAchengemnet.childNodes[9].childNodes[5].childNodes[2].textContent,
+          dribbling:retourAchengemnet.childNodes[9].childNodes[7].childNodes[2].textContent,
+          defending:retourAchengemnet.childNodes[9].childNodes[9].childNodes[2].textContent,
+          physical:retourAchengemnet.childNodes[9].childNodes[11].childNodes[2].textContent
+          
+        }
+        console.log(datafdf);
+                
+      }
+     
+      
+      
         positionJoueur=card.target.closest('.cardeJouerTerain').dataset.position
         idCard=card.target.closest('.cardeJouerTerain').id
           ouverDivCardfitrer()
@@ -57,7 +85,7 @@ let filterData=[]
         let newcard=button.cloneNode(true)
         // console.log(button.id);
         iddelet=button.id
-        deletCard()
+        // deletCard()
         // console.log(filterData);
         
      
@@ -81,9 +109,9 @@ let filterData=[]
 
   // fonction de supremer la filtrer choisei
   function deletCard() {
-    
-    const indexSu= data.findIndex(x=>x.id == iddelet)
+     const indexSu= data.findIndex(x=>x.id == iddelet)
    deleteJoueur(indexSu)
+
   }
   
   function fermereDivCardfitrer() {
@@ -91,4 +119,5 @@ let filterData=[]
    addjoueurs.style.display=" block"
   }
 
+  
   fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)
