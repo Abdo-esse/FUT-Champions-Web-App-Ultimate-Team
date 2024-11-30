@@ -12,6 +12,10 @@ let cardFiltrer=document.querySelector('.cardFiltrer')
 
 let cardFiltrerParent=document.querySelector('.cardFiltrerParent')
 
+const fermereDivCardfitrerBtn=document.querySelector('.retour')
+
+
+
 let idCard=null
 
 
@@ -27,7 +31,7 @@ let idCard=null
         
         
         console.log(positionJoueur);
-        
+        ouverDivCardfitrer()
         filtrePosition()
         transporterdata()
     }
@@ -41,9 +45,7 @@ let idCard=null
     displayCard(cardFiltrer,filterData)
     cardFiltrer.querySelectorAll('.updateAndDelet').forEach(card=>card.style.display=" none")
     
-     cardFiltrerParent.style.display="block"
-    addjoueurs.style.display=" none"
-    // transporterdata()
+    
   }
  
   function transporterdata() {
@@ -57,10 +59,24 @@ let idCard=null
         let cardterainId=document.getElementById(idCard)
         cardterainId.appendChild(newcard)
         button.remove()
-
+        fermereDivCardfitrer()
         
       })
     })
 
   }
   
+  function ouverDivCardfitrer(){
+    console.log(cardFiltrer.querySelectorAll('.updateAndDelet'));
+    
+    
+    cardFiltrerParent.style.display="block"
+   addjoueurs.style.display=" none"
+  }
+  
+  function fermereDivCardfitrer() {
+       cardFiltrerParent.style.display="none"
+   addjoueurs.style.display=" block"
+  }
+
+  fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)

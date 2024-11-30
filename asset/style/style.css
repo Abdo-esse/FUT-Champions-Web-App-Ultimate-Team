@@ -247,9 +247,11 @@ top: 20px;
 .cardFiltrer{
     display: flex;
     flex-wrap: wrap;
+    
 }
-.retour{
+.retour,.fermform{
     width: 21px;
+    cursor: pointer;
 }
 
 

@@ -8,6 +8,8 @@ import{joueur} from "./fourmedynamique.js"
  
  const addjoueurs=document.querySelector('.addJouersImag')
 
+ const fermeFormeRetourBtn=document.querySelector('.fermform')
+
  const forme=document.querySelector('#forme')
 
 let updateDataBtn=document.querySelector('.saveData')
@@ -63,6 +65,6 @@ function fermeForme() {
 
 
 addjoueurs.addEventListener('click',ouverForm)
-
+fermeFormeRetourBtn.addEventListener('click',fermeForme)
 //expotre
 export{fermeForme,ouverForm,deletCardeBtn,updateDataBtn,addjoueurs}
