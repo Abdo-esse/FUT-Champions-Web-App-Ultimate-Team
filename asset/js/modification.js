@@ -1,5 +1,5 @@
 import{ouverForm,updateDataBtn,fermeForme}from "./ouverERFermeform.js"
-import{ displayCard} from "./displayCard.js" 
+import{ displayCard,reserve} from "./displayCard.js" 
 import{data,localStorageData,sendDataBtn,selectInput,photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
     fullNameInputs,regexImage,regex} from "./validationDuForm.js"
     
@@ -84,7 +84,7 @@ const labelJoueur=document.querySelectorAll('.labelJoueur')
        }
     
     
-        displayCard(data)
+        displayCard(reserve,data)
     
         localStorageData()
        

@@ -15,14 +15,14 @@ const reserve=document.querySelector('.cardsJouers')
 
 
 
-function displayCard(array) {
+function displayCard(div,array) {
     
-   reserve.innerHTML="";
+   div.innerHTML="";
 
    array.forEach((elment,index)=>
      
       
-    reserve.innerHTML +=`
+    div.innerHTML +=`
     <div class="cardeJouer">
                 <div class="ratingAndPosition">
                   <h1>${elment.rating}</h1>

@@ -1,6 +1,6 @@
 //import
 import{fermeForme}from "./ouverERFermeform.js"
-import{ displayCard} from "./displayCard.js" 
+import{ displayCard,reserve} from "./displayCard.js" 
 
 // les variables
 // les input du condition phisiquale
@@ -171,7 +171,7 @@ function enregitrerData() {
    
 
 
-    displayCard(data)
+    displayCard(reserve,data)
 
     localStorageData()
    
@@ -194,7 +194,7 @@ function initData() {
   const storedData = localStorage.getItem("data");
   if (storedData) {
       data = JSON.parse(storedData);
-      displayCard(data);
+      displayCard(reserve,data);
       
   }
 }

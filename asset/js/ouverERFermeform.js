@@ -65,4 +65,4 @@ function fermeForme() {
 addjoueurs.addEventListener('click',ouverForm)
 
 //expotre
-export{fermeForme,ouverForm,deletCardeBtn,updateDataBtn}
+export{fermeForme,ouverForm,deletCardeBtn,updateDataBtn,addjoueurs}
