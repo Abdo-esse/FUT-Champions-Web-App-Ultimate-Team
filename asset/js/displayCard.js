@@ -23,7 +23,7 @@ function displayCard(div,array) {
      
       
     div.innerHTML +=`
-    <div class="cardeJouer">
+    <div class="cardeJouer" id="${elment.id}">
                 <div class="ratingAndPosition">
                   <h1>${elment.rating}</h1>
                   <p class="position">${elment.position}</p>
