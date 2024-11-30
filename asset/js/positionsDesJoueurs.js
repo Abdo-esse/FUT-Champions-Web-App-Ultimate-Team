@@ -20,6 +20,6 @@ let positionJoueur=null
   
   function filtrePosition() {
     // console.log('data');
-     data = data.filter(place=>place.position == positionJoueur)
-    console.log(data)
+    let filterData = data.filter(place => place.position == positionJoueur);
+    console.log(filterData)
   }

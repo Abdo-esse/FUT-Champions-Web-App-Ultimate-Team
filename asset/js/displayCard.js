@@ -20,6 +20,7 @@ function displayCard() {
    reserve.innerHTML="";
 
    data.forEach((elment,index)=>
+     
       
     reserve.innerHTML +=`
     <div class="cardeJouer">
@@ -37,12 +38,12 @@ function displayCard() {
                 </div>
                 <div class="name"><h5>${elment.fullName}</h5></div>
                 <div class="conditionPhisique">
-                   <div class="pace"><p>PAC</p> <h6>${elment.pace}</h6></div>
-                   <div class="shooting"><p>SHO</p> <h6>${elment.shooting}</h6></div>
-                   <div class="passing"><p>PAS</p> <h6>${elment.passing}</h6></div>
-                   <div class="dribbling"><p>DRI</p> <h6>${elment.dribbling}</h6></div>
-                   <div class="defending"><p>DFE</p> <h6>${elment.defending}</h6></div>
-                   <div class="physical"><p>PHY</p> <h6>${elment.physical}</h6></div>
+                   <div class="pace"><p>${elment.position === "GK" ? "DIV" : "pace"}</p> <h6>${elment.pace}</h6></div>
+                   <div class="shooting"><p>${elment.position === "GK" ? "HAN" : "SHO"}</p> <h6>${elment.shooting}</h6></div>
+                   <div class="passing"><p>${elment.position === "GK" ? "KIC" : "PAS"}</p> <h6>${elment.passing}</h6></div>
+                   <div class="dribbling"><p>${elment.position === "GK" ? "REF" : "DRI"}</p> <h6>${elment.dribbling}</h6></div>
+                   <div class="defending"><p>${elment.position === "GK" ? "SPD" : "DFE"}</p> <h6>${elment.defending}</h6></div>
+                   <div class="physical"><p>${elment.position === "GK" ? "POS" : "PHY"}</p> <h6>${elment.physical}</h6></div>
                 </div>
                 <div class="club">
                  <div class="nationalite"> <img src="${elment.logo}" alt=""></div>
