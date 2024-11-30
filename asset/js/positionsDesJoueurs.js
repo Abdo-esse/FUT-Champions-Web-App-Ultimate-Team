@@ -57,6 +57,7 @@ let idCard=null
         let newcard=button.cloneNode(true)
      
         let cardterainId=document.getElementById(idCard)
+      cardterainId.innerHTML=``
         cardterainId.appendChild(newcard)
         button.remove()
         fermereDivCardfitrer()
