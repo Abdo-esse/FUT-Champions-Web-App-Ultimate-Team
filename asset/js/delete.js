@@ -4,7 +4,7 @@ import{ displayCard} from "./displayCard.js"
 function deleteJoueur(indexDelet) {
     
     data.splice(indexDelet,1)
-    displayCard()
+    displayCard(data)
     localStorageData()
 }
 

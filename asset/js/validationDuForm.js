@@ -171,7 +171,7 @@ function enregitrerData() {
    
 
 
-    displayCard()
+    displayCard(data)
 
     localStorageData()
    
@@ -194,7 +194,7 @@ function initData() {
   const storedData = localStorage.getItem("data");
   if (storedData) {
       data = JSON.parse(storedData);
-      displayCard();
+      displayCard(data);
       
   }
 }

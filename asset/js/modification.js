@@ -84,7 +84,7 @@ const labelJoueur=document.querySelectorAll('.labelJoueur')
        }
     
     
-        displayCard()
+        displayCard(data)
     
         localStorageData()
        

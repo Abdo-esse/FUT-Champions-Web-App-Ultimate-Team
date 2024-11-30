@@ -15,11 +15,11 @@ const reserve=document.querySelector('.cardsJouers')
 
 
 
-function displayCard() {
+function displayCard(array) {
     
    reserve.innerHTML="";
 
-   data.forEach((elment,index)=>
+   array.forEach((elment,index)=>
      
       
     reserve.innerHTML +=`
