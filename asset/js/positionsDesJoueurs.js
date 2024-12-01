@@ -33,7 +33,7 @@ let retourAchengemnet=null
 let datachandement={}
 
 let objectTerain={}
-
+// tableus des joeurs dans le terain 
 let dataTerain=[]
 
 
@@ -92,7 +92,7 @@ let dataTerain=[]
             localStorageData()  
           }})
           
-        deletCard()
+       
         let cardterainId=document.getElementById(idCard)
         cardterainId.innerHTML=``
         cardterainId.appendChild(newcard)
@@ -122,6 +122,7 @@ let dataTerain=[]
        
         button.remove()
         fermereDivCardfitrer()
+         deletCard()
         // savrTerainLocalstorage()
         
       })
@@ -147,13 +148,11 @@ let dataTerain=[]
    addjoueurs.style.display=" block"
   }
 
+
+  //local storage de joueurs dans le train
    function savrTerainLocalstorage() {
-
-          console.log(dataTerain);
-          
-          
-
-   }
+          localStorage.setItem("data de terain", JSON.stringify(dataTerain));
+    }
 
 
   fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)
