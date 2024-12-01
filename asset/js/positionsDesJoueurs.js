@@ -1,5 +1,5 @@
 import{data,localStorageData} from "./validationDuForm.js"
-import{ displayCard} from "./displayCard.js"
+import{ displayCard,reserve} from "./displayCard.js"
 import{addjoueurs}from "./ouverERFermeform.js"
 import{deleteJoueur} from "./delete.js"
 
@@ -29,6 +29,7 @@ let filterData=[]
 // div chaanger 
 let retourAchengemnet=null
 
+let datachandement={}
 
 
 
@@ -36,7 +37,7 @@ let retourAchengemnet=null
     button.addEventListener('click',(card)=>{
       if (button.hasChildNodes()) {
         retourAchengemnet=button.childNodes[0]
-       let datachandement={
+        datachandement={
 
           id:button.childNodes[0].id,
           fullName:retourAchengemnet.childNodes[7].childNodes[0].textContent,
@@ -53,7 +54,6 @@ let retourAchengemnet=null
           physical:retourAchengemnet.childNodes[9].childNodes[11].childNodes[2].textContent
           
         }
-        console.log(datachandement);
         
         
                 
@@ -87,9 +87,23 @@ let retourAchengemnet=null
         let newcard=button.cloneNode(true)
         // console.log(button.id);
         iddelet=button.id
-        deletCard()
-        // console.log(filterData);
+        console.log(button.id);
+
         
+        
+       
+        cardeJouerTerain.forEach((button)=>{
+    
+          if (button.hasChildNodes()) {
+            data.push(datachandement)
+            localStorageData()
+                 
+            
+          }})
+        // displayCard(reserve,data)
+       
+        deletCard()
+       
      
      
         let cardterainId=document.getElementById(idCard)
@@ -111,7 +125,7 @@ let retourAchengemnet=null
 
   // fonction de supremer la filtrer choisei
   function deletCard() {
-     const indexSu= data.findIndex(x=>x.id == iddelet)
+     let indexSu= data.findIndex(x=>x.id === iddelet)
    deleteJoueur(indexSu)
 
   }
@@ -123,3 +137,18 @@ let retourAchengemnet=null
 
   
   fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
