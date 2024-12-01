@@ -3,6 +3,7 @@ import{formeUpdateData} from "./modification.js"
 import{deleteJoueur} from "./delete.js"
 
 
+
 //div de reserve
 const reserve=document.querySelector('.cardsJouers')
 

@@ -2,6 +2,7 @@ import{ouverForm,updateDataBtn,fermeForme}from "./ouverERFermeform.js"
 import{ displayCard,reserve} from "./displayCard.js" 
 import{data,localStorageData,sendDataBtn,selectInput,photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
     fullNameInputs,regexImage,regex} from "./validationDuForm.js"
+   
     
     let modifucationDataBtn=document.querySelector('.saveData')
 

@@ -3,6 +3,7 @@ import{ displayCard,reserve} from "./displayCard.js"
 import{addjoueurs}from "./ouverERFermeform.js"
 import{deleteJoueur} from "./delete.js"
 
+
 // select les card du joueurs
   let cardeJouerTerain=document.querySelectorAll('.cardeJouerTerain')
 // position 
@@ -31,6 +32,10 @@ let retourAchengemnet=null
 
 let datachandement={}
 
+let objectTerain={}
+
+let dataTerain=[]
+
 
 
   cardeJouerTerain.forEach((button)=>{
@@ -53,21 +58,14 @@ let datachandement={}
           defending:retourAchengemnet.childNodes[9].childNodes[9].childNodes[2].textContent,
           physical:retourAchengemnet.childNodes[9].childNodes[11].childNodes[2].textContent
           
-        }
-        
-        
-                
+        }          
       }
-     
-      
-      
-        positionJoueur=card.target.closest('.cardeJouerTerain').dataset.position
+      positionJoueur=card.target.closest('.cardeJouerTerain').dataset.position
         idCard=card.target.closest('.cardeJouerTerain').id
           ouverDivCardfitrer()
           filtrePosition()
           transporterdata()
-    }
-    )
+    })
   })
   
   // la fonction da filtr data par la position en terain
@@ -85,32 +83,46 @@ let datachandement={}
    
       button.addEventListener('click',()=>{
         let newcard=button.cloneNode(true)
-        // console.log(button.id);
         iddelet=button.id
-        console.log(button.id);
-
         
-        
-       
         cardeJouerTerain.forEach((button)=>{
     
           if (button.hasChildNodes()) {
             data.push(datachandement)
-            localStorageData()
-                 
-            
+            localStorageData()  
           }})
-        // displayCard(reserve,data)
-       
+          
         deletCard()
-       
-     
-     
         let cardterainId=document.getElementById(idCard)
-      cardterainId.innerHTML=``
+        cardterainId.innerHTML=``
         cardterainId.appendChild(newcard)
+        
+        objectTerain={
+          id:newcard.id,
+          fullName:newcard.childNodes[7].childNodes[0].textContent,
+          photo:newcard.childNodes[3].childNodes[1].currentSrc,
+          position:newcard.childNodes[1].childNodes[3].textContent,
+          flag:newcard.childNodes[11].childNodes[1].childNodes[1].currentSrc,
+          logo:newcard.childNodes[11].childNodes[3].childNodes[0].currentSrc, 
+          rating:newcard.childNodes[1].childNodes[1].textContent,
+          pace:newcard.childNodes[9].childNodes[1].childNodes[2].textContent,
+          shooting:newcard.childNodes[9].childNodes[3].childNodes[2].textContent,
+          passing:newcard.childNodes[9].childNodes[5].childNodes[2].textContent,
+          dribbling:newcard.childNodes[9].childNodes[7].childNodes[2].textContent,
+          defending:newcard.childNodes[9].childNodes[9].childNodes[2].textContent,
+          physical:newcard.childNodes[9].childNodes[11].childNodes[2].textContent
+
+        }
+        // console.log(objectTerain);
+        
+         dataTerain.push(objectTerain)
+         savrTerainLocalstorage()
+        //  console.log(dataTerain);
+         
+       
         button.remove()
         fermereDivCardfitrer()
+        // savrTerainLocalstorage()
         
       })
     })
@@ -135,7 +147,15 @@ let datachandement={}
    addjoueurs.style.display=" block"
   }
 
-  
+   function savrTerainLocalstorage() {
+
+          console.log(dataTerain);
+          
+          
+
+   }
+
+
   fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)
 
 

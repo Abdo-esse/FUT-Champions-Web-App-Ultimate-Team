@@ -1,6 +1,7 @@
 import{data,localStorageData} from "./validationDuForm.js"
 import{ displayCard,reserve} from "./displayCard.js"
 
+
 function deleteJoueur(indexDelet) {
     
     data.splice(indexDelet,1)
