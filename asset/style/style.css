@@ -76,11 +76,11 @@ body{
 }
 
 .name{
-    grid-area: 4/ 2 / 5/ 4; 
+    grid-area: 4 / 2 / 5 / 4;
     text-align: center;
-    font-size: 17px;
+    font-size: 14px;
     position: relative;
-    bottom: 8px;
+    bottom: 6px;
 }
 .conditionPhisique{
     grid-area: 5/ 2 / 6/ 4;
@@ -258,7 +258,9 @@ top: 20px;
 @media  (max-width:756px)  {
     .container{
         
-        grid-template-rows: 30vh 100vh 30vh;
+        /* grid-template-rows: 30vh 100vh 30vh; */
+        display: flex;flex-direction: column;
+
       
     }
     
@@ -270,8 +272,30 @@ top: 20px;
       
     
     }
-    
-
+    .cardeJouer{
+        display: grid;
+        grid-template-rows: 18px 0px 72px 9px 14px 12px;
+        grid-template-columns: 5px 22px 67px;
+    }
+    .photo img {
+        height: 103%;
+        width: 69%;
+        position: relative;
+        bottom: 3px;
+        left: 12px;
+    }
+    .updat {
+        top: 25px;
+        left: 78px;
+    }
+    .delet {
+        top: 26px;
+        left: 75px;
+ 
+    }
+    .terain{
+        padding-top: 40px;
+    }
 }
 
 

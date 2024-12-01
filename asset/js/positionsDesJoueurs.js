@@ -16,7 +16,7 @@ let cardFiltrer=document.querySelector('.cardFiltrer')
 let cardFiltrerParent=document.querySelector('.cardFiltrerParent')
 
 //btn de retour
-const fermereDivCardfitrerBtn=document.querySelector('.retour')
+const fermereDivCardfitrerBtn=document.querySelector('.retour') 
 
 //id du card en html
 let idCard=null
@@ -32,15 +32,14 @@ let retourAchengemnet=null
 
 let datachandement={}
 
-let objectTerain={}
-// tableus des joeurs dans le terain 
-let dataTerain=[]
+
+
 
 
 
   cardeJouerTerain.forEach((button)=>{
     button.addEventListener('click',(card)=>{
-      if (button.hasChildNodes()) {
+      if (button.children.length>1) {
         retourAchengemnet=button.childNodes[0]
         datachandement={
 
@@ -70,7 +69,6 @@ let dataTerain=[]
   
   // la fonction da filtr data par la position en terain
   function filtrePosition() {
-    // filterData=filterData.map()
     filterData = data.filter(place => place.position == positionJoueur);
     displayCard(cardFiltrer,filterData)
     cardFiltrer.querySelectorAll('.updateAndDelet').forEach(card=>card.style.display=" none")
@@ -88,47 +86,34 @@ let dataTerain=[]
         cardeJouerTerain.forEach((button)=>{
     
           if (button.hasChildNodes()) {
+            console.log(button);
+            console.log(datachandement);
+            
+            
             data.push(datachandement)
+            for (let i = 0; i < data.length; i++) {
+              
+                if ( Object.keys(data[i]).length === 0) {
+                  data.splice(i,1)  
+                  
+                   
+              }
+              
+            }
             localStorageData()  
           }})
           
-       
+         
         let cardterainId=document.getElementById(idCard)
         cardterainId.innerHTML=``
         cardterainId.appendChild(newcard)
-        
-        objectTerain={
-          id:newcard.id,
-          fullName:newcard.childNodes[7].childNodes[0].textContent,
-          photo:newcard.childNodes[3].childNodes[1].currentSrc,
-          position:newcard.childNodes[1].childNodes[3].textContent,
-          flag:newcard.childNodes[11].childNodes[1].childNodes[1].currentSrc,
-          logo:newcard.childNodes[11].childNodes[3].childNodes[0].currentSrc, 
-          rating:newcard.childNodes[1].childNodes[1].textContent,
-          pace:newcard.childNodes[9].childNodes[1].childNodes[2].textContent,
-          shooting:newcard.childNodes[9].childNodes[3].childNodes[2].textContent,
-          passing:newcard.childNodes[9].childNodes[5].childNodes[2].textContent,
-          dribbling:newcard.childNodes[9].childNodes[7].childNodes[2].textContent,
-          defending:newcard.childNodes[9].childNodes[9].childNodes[2].textContent,
-          physical:newcard.childNodes[9].childNodes[11].childNodes[2].textContent
-
-        }
-        // console.log(objectTerain);
-        
-         dataTerain.push(objectTerain)
-         savrTerainLocalstorage()
-        //  console.log(dataTerain);
-         
-       
         button.remove()
+        deletCard()
         fermereDivCardfitrer()
-         deletCard()
-        // savrTerainLocalstorage()
-        
-      })
+         
+         })
     })
-
-  }
+ }
   
   // la fonction da ouvar da div de jdq
   function ouverDivCardfitrer(){
@@ -139,6 +124,8 @@ let dataTerain=[]
   // fonction de supremer la filtrer choisei
   function deletCard() {
      let indexSu= data.findIndex(x=>x.id === iddelet)
+     console.log(indexSu);
+     
    deleteJoueur(indexSu)
 
   }
@@ -149,10 +136,7 @@ let dataTerain=[]
   }
 
 
-  //local storage de joueurs dans le train
-   function savrTerainLocalstorage() {
-          localStorage.setItem("data de terain", JSON.stringify(dataTerain));
-    }
+  
 
 
   fermereDivCardfitrerBtn.addEventListener('click',fermereDivCardfitrer)
