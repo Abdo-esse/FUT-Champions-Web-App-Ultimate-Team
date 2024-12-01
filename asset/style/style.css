@@ -296,6 +296,18 @@ top: 20px;
     .terain{
         padding-top: 40px;
     }
+    .remlacement{
+        width: 100vw;
+        margin-left: 10px;
+    }
+    .addJouers img{
+       
+        margin-left: 15px;
+        height: 27vh;
+       
+        width: 106px;
+    }
+
 }
 
 
