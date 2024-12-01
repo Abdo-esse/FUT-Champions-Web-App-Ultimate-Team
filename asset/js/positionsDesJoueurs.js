@@ -39,7 +39,7 @@ let datachandement={}
 
   cardeJouerTerain.forEach((button)=>{
     button.addEventListener('click',(card)=>{
-      if (button.children.length>1) {
+      if (button.hasChildNodes()) {
         retourAchengemnet=button.childNodes[0]
         datachandement={
 
@@ -57,7 +57,9 @@ let datachandement={}
           defending:retourAchengemnet.childNodes[9].childNodes[9].childNodes[2].textContent,
           physical:retourAchengemnet.childNodes[9].childNodes[11].childNodes[2].textContent
           
-        }          
+        }     
+        
+             
       }
       positionJoueur=card.target.closest('.cardeJouerTerain').dataset.position
         idCard=card.target.closest('.cardeJouerTerain').id
@@ -86,20 +88,18 @@ let datachandement={}
         cardeJouerTerain.forEach((button)=>{
     
           if (button.hasChildNodes()) {
-            console.log(button);
-            console.log(datachandement);
-            
-            
-            data.push(datachandement)
+             data.push(datachandement)
             for (let i = 0; i < data.length; i++) {
-              
                 if ( Object.keys(data[i]).length === 0) {
-                  data.splice(i,1)  
-                  
-                   
+                  data.splice(i,1)        
               }
-              
+               for (let j = i+1; j < data.length; j++) {
+                if (data[i]==data[j]) {
+                   data.splice(j,1)
+                   } 
+               }   
             }
+            
             localStorageData()  
           }})
           
