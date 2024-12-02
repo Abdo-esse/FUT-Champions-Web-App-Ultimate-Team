@@ -67,6 +67,8 @@ let physicalInputs =document.querySelector('.physicalInputs')
 //data
 let data=[]
 
+
+
 //count
 let count=0
 

@@ -297,9 +297,10 @@ top: 20px;
         padding-top: 40px;
     }
     .addJouersImag{
-        width: 97px;
-    height: 103px;
+       
     margin-left: 20px;
+    height: 26vh;
+    width: 115px;
     }
     .cardsJouers{
         width: 113vw;
@@ -307,6 +308,11 @@ top: 20px;
     }
     .conditionPhisique{
         column-gap: 2px;
+    }
+    .addJouers img {
+        height: 28vh;
+        /* display: none; */
+        width: 115px;
     }
 }
 
