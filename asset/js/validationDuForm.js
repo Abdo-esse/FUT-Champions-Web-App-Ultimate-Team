@@ -69,9 +69,6 @@ let data=[]
 
 
 
-//count
-let count=0
-
 // fullNam
 let fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribbling,defending,physical;
 
@@ -88,6 +85,7 @@ let fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribblin
  //validation condition Phisique
  function validationconditionPhisique() {
     for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
+      
       if (conditionPhisiqueIunput[i].value > 10 &&conditionPhisiqueIunput[i].value < 100) {
         conditionPhisiqueIunput[i].style.border = "2.5px solid green";
         rating=conditionPhisiqueIunput[0].value
