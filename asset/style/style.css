@@ -296,6 +296,18 @@ top: 20px;
     .terain{
         padding-top: 40px;
     }
+    .addJouersImag{
+        width: 97px;
+    height: 103px;
+    margin-left: 20px;
+    }
+    .cardsJouers{
+        width: 113vw;
+    margin-left: 13px;
+    }
+    .conditionPhisique{
+        column-gap: 2px;
+    }
 }
 
 
