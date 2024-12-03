@@ -124,7 +124,6 @@ let datachandement={}
   // fonction de supremer la filtrer choisei
   function deletCard() {
      let indexSu= data.findIndex(x=>x.id === iddelet)
-     console.log(indexSu);
      
    deleteJoueur(indexSu)
 
