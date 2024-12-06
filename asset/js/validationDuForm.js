@@ -153,6 +153,7 @@ function enregitrerData() {
     // console.log(fullName,photo,position,flag,club,logo,rating,pace,shooting,passing,dribbling,defending,physical);
    
    ajouteCard()
+    console.log(data);
     
     displayCard(reserve,data)
 
@@ -200,6 +201,7 @@ function initData() {
   }
 }
 // l'appel des fonctions
+
 //validation
 //validation de nombre
 for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
@@ -235,45 +237,3 @@ export{conditionPhisiqueIunput,inputsText,inputsLien, selectInput,data,enregitre
 photoInputs,flagInputs,clubInputs,logoInputs,ratingInputs,paceInputs,shootingInputs,passingInputs,dribblingInputs,defendingInputs,physicalInputs,
 fullNameInputs,regexImage,regex
 }
-
-
-
-
-
-
-
-let arrau=[
-  {
-    nome:'abdo',
-    prenom:'esse'
-  },
-  {
-    nome:'MOhamm',
-    prenom:'ejhjjke'
-  },
-  {
-    nome:'aueue',
-    prenom:'esjjkkje'
-  },
-  {
-    nome:'abkkjho',
-    prenom:'essjjje'
-  },
-
-
-]
-
-
-function x(arry,str) {
-
-  for (let i = 0; i < arry.length; i++) {
-
-    if(str==arry[i].nome){
-      return true
-    }
-    return false
-  }
-
- 
-}
-
