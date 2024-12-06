@@ -7,6 +7,15 @@ import{deleteJoueur} from "./delete.js"
 //div de reserve
 const reserve=document.querySelector('.cardsJouers')
 
+
+
+
+
+
+
+
+
+
 function displayCard(div,array) {
     
    div.innerHTML="";
