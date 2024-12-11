@@ -1,70 +1,42 @@
-//import
-import{conditionPhisiqueIunput,inputsText,inputsLien, selectInput}from "./validationDuForm.js"
-import{joueur} from "./fourmedynamique.js"
- 
-//  const labelGolkepr=document.querySelectorAll('.goolkepr')
-//  labelGolkepr.forEach(label=>label.style.display=" none")
- 
- 
- const addjoueurs=document.querySelector('.addJouersImag')
+import{selectInput} from "./validationDuForm.js"
 
- const fermeFormeRetourBtn=document.querySelector('.fermform')
-
- const forme=document.querySelector('#forme')
-
-let updateDataBtn=document.querySelector('.saveData')
-// console.log(updateDataBtn);
+//div des inputs du joueurs
+let joueur=document.querySelector('.joueurs')
 
 
+//les labelle des  des inputs du GK
+const labelGolkepr=document.querySelectorAll('.goolkepr')
 
-const deletCardeBtn=document.querySelector('.deletData')
+
+//les labelle des  des inputs du GK
+const labelJoueur=document.querySelectorAll('.labelJoueur')
 
 
 
 
-function ouverForm(){
-    
-    
-    addjoueurs.style.display=" none"
-    forme.style.display="block"
-    updateDataBtn.style.display=" none"
-    deletCardeBtn.style.display=" none"
-    joueur.style.display=" none"
 
-}
+function formedynamiq() {
+    if (selectInput.value=="GK"){
+        labelGolkepr.forEach(label=>label.style.display="block")
+        labelJoueur.forEach(label=>label.style.display="none")
+        joueur.style.display="block"
 
-
-function fermeForme() {
-    
-    for (let i = 0; i < conditionPhisiqueIunput.length; i++) {
-        conditionPhisiqueIunput[i].value=""
-        conditionPhisiqueIunput[i].style.border = "none";
-    }
-    for (let i = 0; i < inputsText.length; i++) {
-        inputsText[i].value=""
-        inputsText[i].style.border = "none";
-    }
-    for (let i = 0; i < inputsLien.length; i++) {
-        inputsLien[i].value=""
-        inputsLien[i].style.border = "none";
-    }
-    selectInput.value=""
-    selectInput.style.border = "none";
-
-
-
-
-    addjoueurs.style.display=" block"
-    forme.style.display="none"
-    
-
-    
+     }else if (selectInput.value=="") {
+        labelGolkepr.forEach(label=>label.style.display="none")
+        labelJoueur.forEach(label=>label.style.display="none")
+        joueur.style.display="none"
+     }else{
+        labelGolkepr.forEach(label=>label.style.display="none")
+        labelJoueur.forEach(label=>label.style.display="block")
+        joueur.style.display="block"
+     }
+      
 }
 
 
 
+selectInput.addEventListener('change',formedynamiq)
 
-addjoueurs.addEventListener('click',ouverForm)
-fermeFormeRetourBtn.addEventListener('click',fermeForme)
-//expotre
-export{fermeForme,ouverForm,deletCardeBtn,updateDataBtn,addjoueurs}
+export{
+    labelJoueur,labelGolkepr,joueur
+}
