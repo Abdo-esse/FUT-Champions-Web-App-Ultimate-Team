@@ -12,6 +12,6 @@ function deleteJoueur(indexDelet) {
 
 
 
-
+//termine front-end
 
 export{ deleteJoueur}
